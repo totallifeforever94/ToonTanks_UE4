@@ -29,4 +29,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent *ProjectileSpawnPoint = nullptr;
+
+protected:
+	void RotateTurret(FVector LookAtTarget);
+	void Fire();
+	virtual void HandleDestruction();
 };
